@@ -15,17 +15,17 @@ const highlights = [
 const Home = () => {
   const [darkMode, setDarkMode] = useState(false);
 
-  const toggleTheme = () => {
-    if (darkMode) {
-      document.body.classList.add("light");
-      document.body.classList.remove("dark");
-      setDarkMode(false);
-    } else {
-      document.body.classList.add("dark");
-      document.body.classList.remove("light");
-      setDarkMode(true);
-    }
-  };
+  // const toggleTheme = () => {
+  //   if (darkMode) {
+  //     document.body.classList.add("light");
+  //     document.body.classList.remove("dark");
+  //     setDarkMode(false);
+  //   } else {
+  //     document.body.classList.add("dark");
+  //     document.body.classList.remove("light");
+  //     setDarkMode(true);
+  //   }
+  // };
 
   return (
     <section className="home-section">
