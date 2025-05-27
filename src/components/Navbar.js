@@ -17,6 +17,7 @@ const Navbar = ({ toggleTheme, theme }) => {
         </button>
 
         <ul className={`nav-links ${isOpen ? "open" : ""}`}>
+          <li><a href="/" onClick={() => setIsOpen(false)}>Home</a></li>
           <li><a href="experience" onClick={() => setIsOpen(false)}>Experience</a></li>
           <li><a href="projects" onClick={() => setIsOpen(false)}>Projects</a></li>
           <li><a href="skills" onClick={() => setIsOpen(false)}>Skills</a></li>
