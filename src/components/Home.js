@@ -13,7 +13,7 @@ const highlights = [
 ];
 
 const Home = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  //const [darkMode, setDarkMode] = useState(false);
 
   // const toggleTheme = () => {
   //   if (darkMode) {
