@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub, FaCode } from "react-icons/fa";
 import { HiOutlineDocumentDownload } from "react-icons/hi";
