@@ -1,0 +1,133 @@
+/* Light mode variables */
+body.light {
+  --card-bg-top: #f0f7ff;
+  --card-bg-bottom: #ffffff;
+  --card-bg: #fff;
+  --text-color: #111;
+  --subtext-color: #555;
+  --highlight-color: #007bff;
+  --shadow-color: rgba(0, 123, 255, 0.15);
+}
+
+/* Dark mode variables */
+body.dark {
+  --card-bg-top: #2c3e50;
+  --card-bg-bottom: #34495e;
+  --card-bg: #1e1e1e;
+  --text-color: #eee;
+  --subtext-color: #bbb;
+  --highlight-color: #3399ff;
+  --shadow-color: rgba(51, 153, 255, 0.3);
+}
+
+.education-section {
+  padding-top: 70px;
+  max-width: 1200px;
+  width: 90vw;
+  margin: auto;
+  padding: 2rem 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-margin-top: 70px;
+  color: var(--text-color);
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  color: var(--highlight-color);
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.education-cards-wrapper {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.education-card {
+  flex: 1 1 300px;
+  background: linear-gradient(
+    to bottom,
+    var(--card-bg-top),
+    var(--card-bg-bottom)
+  );
+  box-shadow: 0 4px 16px var(--shadow-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  color: var(--text-color);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: default;
+  min-width: 280px;
+}
+
+.education-card:hover {
+  box-shadow: 0 8px 24px var(--shadow-color);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  color: var(--subtext-color);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.edu-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 8px;
+  flex-shrink: 0;
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
+.card-content {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.no-logo {
+  display: block;
+}
+
+.centered-content {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.edu-degree {
+  margin: 0 0 0.3rem 0;
+  color: var(--highlight-color);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.edu-institute {
+  margin: 0 0 0.3rem 0;
+  font-weight: 600;
+  color: var(--subtext-color);
+}
+
+.edu-year,
+.edu-cgpa,
+.edu-percentage,
+.edu-achievement {
+  margin: 0 0 0.3rem 0;
+  font-style: italic;
+  color: var(--text-color);
+}
+
+.edu-achievement {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--highlight-color);
+  margin-top: 0.5rem;
+}

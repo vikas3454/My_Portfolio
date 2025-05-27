@@ -1,0 +1,26 @@
+body.light {
+  --bg-color: #ffffff;
+  --text-color: #222222;
+  --primary-color: #007bff;
+  background-color: #ffffff;
+  color: #222222;
+}
+
+body.dark {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --primary-color: #1e90ff;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+:root {
+  --bg-color: #ffffff;
+  --text-color: #222222;
+  --primary-color: #0077ff;
+}
+
+[data-theme="dark"] {
+  --bg-color: #111827;
+  --text-color: #ffffff;
+  --primary-color: #3b82f6;
+}

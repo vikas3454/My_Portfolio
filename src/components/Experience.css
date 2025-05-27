@@ -1,0 +1,134 @@
+:root {
+  --bg-light: #f0f2f5;
+  --bg-dark: #0d1117;
+  --card-light: #ffffff;
+  --card-dark: #161b22;
+  --text-light: #1a1a1a;
+  --text-dark: #c9d1d9;
+  --accent-light: #007bff;
+  --accent-dark: #58a6ff;
+  --pill-light: #e0f0ff;
+  --pill-dark: #1f6feb;
+}
+
+body.light .experience-section {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+body.dark .experience-section {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.experience-section {
+  padding: 2rem;
+  padding: 80px;
+  max-width: 1100px;
+  margin: auto;
+  transition: all 0.3s ease;
+}
+
+.experience-title {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--accent-light);
+}
+body.dark .experience-title {
+  color: var(--accent-dark);
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  gap: 1.5rem;
+}
+
+.experience-card {
+  display: flex;
+  gap: 1.2rem;
+  padding: 1.2rem;
+  border-radius: 16px;
+  background-color: var(--card-light);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+body.dark .experience-card {
+  background-color: var(--card-dark);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 123, 255, 0.15);
+}
+
+.experience-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.experience-content {
+  flex: 1;
+  min-width: 250px;
+}
+
+.company-name {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent-light);
+}
+body.dark .company-name {
+  color: var(--accent-dark);
+}
+
+.role-date-location {
+  margin: 0.3rem 0 0.8rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.experience-points {
+  margin-left: 1rem;
+  padding: 0;
+  list-style-type: disc;
+  margin-bottom: 1rem;
+}
+
+.experience-point {
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-pill {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 20px;
+  background-color: var(--pill-light);
+  color: var(--accent-light);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  user-select: none;
+}
+body.dark .tech-pill {
+  background-color: var(--pill-dark);
+  color: #fff;
+}
+
+.tech-pill:hover {
+  transform: scale(1.05);
+  cursor: default;
+}

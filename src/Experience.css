@@ -1,0 +1,96 @@
+#experience {
+    padding: 4rem;
+    max-width: 1000px;
+    margin: auto;
+    background-color: #f9faff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.1);
+  }
+  
+  #experience h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #007bff;
+    font-weight: 700;
+  }
+  
+  /* Grid container for cards */
+  .experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  /* Card styles remain same */
+  .experience-card {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    background-color: #fff;
+    align-items: flex-start;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .experience-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.2);
+  }
+  
+  .experience-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+  
+  .experience-details {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .experience-company {
+    margin: 0 0 0.3rem 0;
+    color: #007bff;
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+  
+  .experience-role-date {
+    margin: 0 0 0.5rem 0;
+    font-weight: 600;
+    color: #333;
+    font-size: 0.95rem;
+  }
+  
+  .experience-points {
+    margin-left: 1rem;
+    padding-left: 0;
+    list-style-type: disc;
+    color: #444;
+  }
+  
+  .experience-points li {
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+    font-size: 0.9rem;
+  }
+  
+  .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .tech-badge {
+    background-color: #e0f0ff;
+    color: #007bff;
+    font-weight: 600;
+    padding: 0.3rem 0.7rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    user-select: none;
+  }
+  

@@ -1,0 +1,117 @@
+:root {
+  --icon-color-light: #007bff;
+  --icon-color-dark: #3399ff;
+  --card-bg-light: #f0f7ff;
+  --card-bg-dark: #1e1e1e;
+  --text-color-light: #111;
+  --text-color-dark: #eee;
+  --shadow-light: rgba(0, 123, 255, 0.15);
+  --shadow-dark: rgba(51, 153, 255, 0.3);
+  --badge-bg-advanced: #28a745;
+  --badge-bg-intermediate: #ffc107;
+  --badge-bg-beginner: #dc3545;
+}
+
+body.light {
+  --icon-color: var(--icon-color-light);
+  --card-bg: var(--card-bg-light);
+  --text-color: var(--text-color-light);
+  --shadow-color: var(--shadow-light);
+}
+
+body.dark {
+  --icon-color: var(--icon-color-dark);
+  --card-bg: var(--card-bg-dark);
+  --text-color: var(--text-color-dark);
+  --shadow-color: var(--shadow-dark);
+}
+
+.skills-section {
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding-top: 80px;
+  padding: 0 1.5rem;
+  color: var(--text-color);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  padding-top: 70px;
+  text-align: center;
+  color: var(--icon-color);
+  margin-bottom: 2rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.8rem;
+}
+
+.skill-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px var(--shadow-color);
+  padding: 1.2rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.skill-card:hover {
+  box-shadow: 0 8px 24px var(--shadow-color);
+  transform: translateY(-5px);
+}
+
+.skill-icon {
+  color: var(--icon-color);
+  font-size: 2.4rem;
+  flex-shrink: 0;
+}
+
+.skill-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-name {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.skill-level {
+  margin-top: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 12px;
+  width: fit-content;
+  color: white;
+}
+
+.skill-level.advanced {
+  background-color: var(--badge-bg-advanced);
+}
+
+.skill-level.intermediate {
+  background-color: var(--badge-bg-intermediate);
+}
+
+.skill-level.beginner {
+  background-color: var(--badge-bg-beginner);
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+  .skill-name {
+    font-size: 1rem;
+  }
+}
