@@ -1,8 +1,23 @@
+/* Light mode variables */
+body.light {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --primary-color: #0077ff;
+}
+
+/* Dark mode variables */
+body.dark {
+  --bg-color: #121212;
+  --text-color: #eeeeee;
+  --primary-color: #1e90ff;
+}
+
+/* Base styles using CSS variables */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background: var(--bg-color);
+  background-color: var(--bg-color);
   color: var(--text-color);
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   z-index: 1000;
@@ -31,12 +46,32 @@
 
 .nav-links li a {
   text-decoration: none;
-  color: inherit;
-  transition: color 0.3s;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+  position: relative;
+  padding: 0.5rem 0.75rem;
 }
 
 .nav-links li a:hover {
   color: var(--primary-color);
+}
+
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .theme-toggle {
@@ -44,17 +79,17 @@
   border: none;
   font-size: 1.2rem;
   cursor: pointer;
-  color: inherit;
+  color: var(--text-color);
 }
 
-/* Hamburger - only shown on mobile */
+/* Hamburger - mobile */
 .hamburger {
   display: none;
   background: none;
   font-size: 1.5rem;
   border: none;
   cursor: pointer;
-  color: inherit;
+  color: var(--text-color);
 }
 
 /* Mobile styles */
@@ -82,34 +117,4 @@
     padding: 0.5rem 0;
     text-align: center;
   }
-}
-.nav-links li a {
-  position: relative;
-  display: inline-block;
-  padding: 0.5rem 0.75rem;
-  color: #333;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.nav-links li a:hover {
-  color: #0077ff; /* Primary hover color */
-}
-
-.nav-links li a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 100%;
-  height: 2px;
-  background-color: #0077ff;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.3s ease;
-}
-
-.nav-links li a:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
 }

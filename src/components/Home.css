@@ -1,261 +1,249 @@
+/* Base styles (Light mode) */
 .home-section {
-    min-height: 100vh;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-  }
-  
+  min-height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  color: #222;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 900px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
   .home-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    max-width: 900px;
-    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
   }
-  
-  @media (min-width: 768px) {
-    .home-container {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-  }
-  
-  .image-container {
-    width: 220px;
-    height: 220px;
-    overflow: hidden;
-    border-radius: 50%;
-    border: 4px solid #007bff;
-    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
-    flex-shrink: 0;
-  }
-  
-  .profile-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
+}
+
+.image-container {
+  width: 220px;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 4px solid #007bff;
+  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
+  flex-shrink: 0;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-content {
+  max-width: 500px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
   .text-content {
-    max-width: 500px;
-    text-align: center;
+    text-align: left;
   }
-  
-  @media (min-width: 768px) {
-    .text-content {
-      text-align: left;
-    }
-  }
-  
-  .text-content h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: #222;
-    margin-bottom: 0.25rem;
-  }
-  
-  .highlight {
-    color: #007bff;
-  }
-  
-  .role {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: #444;
-    margin-bottom: 1rem;
-  }
-  
-  .text-content p {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.5;
-  }
-  .home-section {
-    min-height: 100vh;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-  }
-  
-  .home-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    max-width: 900px;
-    width: 100%;
-  }
-  
-  @media (min-width: 768px) {
-    .home-container {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-  }
-  
-  .image-container {
-    width: 220px;
-    height: 220px;
-    overflow: hidden;
-    border-radius: 50%;
-    border: 4px solid #007bff;
-    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
-    flex-shrink: 0;
-  }
-  
-  .profile-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .text-content {
-    max-width: 500px;
-    text-align: center;
-  }
-  
-  @media (min-width: 768px) {
-    .text-content {
-      text-align: left;
-    }
-  }
-  
-  .text-content h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: #222;
-    margin-bottom: 0.25rem;
-  }
-  
-  .highlight {
-    color: #007bff;
-  }
-  
-  .role {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: #444;
-    margin-bottom: 1rem;
-  }
-  
-  .text-content p {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.5;
-  }
-  
-  /* CTA Buttons container */
-  .cta-buttons {
-    margin-top: 1.5rem;
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  }
-  
-  /* Button base */
-  .btn {
-    font-weight: 600;
-    font-size: 1rem;
-    padding: 0.6rem 1.25rem;
-    border-radius: 6px;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    user-select: none;
-  }
-  
-  /* Primary filled button */
-  .btn-primary {
-    background-color: #007bff;
-    color: white;
-    border: none;
-  }
-  
-  .btn-primary:hover,
-  .btn-primary:focus {
-    background-color: #0056b3;
-    color: #fff;
-    outline: none;
-  }
-  
-  /* Outline button */
-  .btn-outline {
-    background-color: transparent;
-    color: #007bff;
-    border: 2px solid #007bff;
-  }
-  
-  .btn-outline:hover,
-  .btn-outline:focus {
-    background-color: #007bff;
-    color: white;
-    outline: none;
-  }
-  
-  /* Icon size in buttons */
-  .btn svg {
-    font-size: 1.2rem;
-  }
-  
-  /* Social Icons */
-  .social-icons {
-    margin-top: 1.5rem;
-    display: flex;
-    gap: 1.5rem;
-    font-size: 1.8rem;
-    color: #007bff;
-    justify-content: flex-start;
-  }
-  
-  .social-icons a {
-    color: inherit;
-    transition: color 0.3s ease;
-  }
-  
-  .social-icons a:hover,
-  .social-icons a:focus {
-    color: #0056b3;
-    outline: none;
-  }
-  
-  /* Highlights container */
-  .highlights {
-    margin-top: 2rem;
-    display: flex;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  }
-  
-  .highlight-item {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    border: 1px solid #007bff;
-    border-radius: 6px;
-    padding: 0.4rem 0.8rem;
-    color: #007bff;
-    font-weight: 600;
-    font-size: 0.9rem;
-    user-select: none;
-  }
-  
-  .highlight-item svg {
-    font-size: 1.1rem;
-  }
-  
+}
+
+.text-content h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0.25rem;
+}
+
+.highlight {
+  color: #007bff;
+}
+
+.role {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.text-content p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* CTA Buttons container */
+.cta-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+/* Button base */
+.btn {
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.6rem 1.25rem;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+}
+
+/* Primary filled button */
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #0056b3;
+  color: #fff;
+  outline: none;
+}
+
+/* Outline button */
+.btn-outline {
+  background-color: transparent;
+  color: #007bff;
+  border: 2px solid #007bff;
+}
+
+.btn-outline:hover,
+.btn-outline:focus {
+  background-color: #007bff;
+  color: white;
+  outline: none;
+}
+
+/* Icon size in buttons */
+.btn svg {
+  font-size: 1.2rem;
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.8rem;
+  color: #007bff;
+  justify-content: flex-start;
+}
+
+.social-icons a {
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover,
+.social-icons a:focus {
+  color: #0056b3;
+  outline: none;
+}
+
+/* Highlights container */
+.highlights {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid #007bff;
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  color: #007bff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  user-select: none;
+}
+
+.highlight-item svg {
+  font-size: 1.1rem;
+}
+
+/* ========== DARK MODE ========== */
+/* Add .dark to a wrapper/container or body */
+
+.dark .home-section {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark .text-content h1 {
+  color: #f0f0f0;
+}
+
+.dark .highlight {
+  color: #3399ff;
+}
+
+.dark .role {
+  color: #bbb;
+}
+
+.dark .text-content p {
+  color: #ccc;
+}
+
+.dark .image-container {
+  border-color: #3399ff;
+  box-shadow: 0 6px 15px rgba(51, 153, 255, 0.4);
+}
+
+.dark .btn-primary {
+  background-color: #3399ff;
+  color: #121212;
+}
+
+.dark .btn-primary:hover,
+.dark .btn-primary:focus {
+  background-color: #1a73e8;
+  color: #fff;
+}
+
+.dark .btn-outline {
+  color: #3399ff;
+  border-color: #3399ff;
+}
+
+.dark .btn-outline:hover,
+.dark .btn-outline:focus {
+  background-color: #3399ff;
+  color: #121212;
+}
+
+.dark .social-icons {
+  color: #3399ff;
+}
+
+.dark .social-icons a:hover,
+.dark .social-icons a:focus {
+  color: #1a73e8;
+}
+
+.dark .highlight-item {
+  border-color: #3399ff;
+  color: #3399ff;
+}

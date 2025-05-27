@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub, FaCode } from "react-icons/fa";
 import { HiOutlineDocumentDownload } from "react-icons/hi";
@@ -13,6 +13,20 @@ const highlights = [
 ];
 
 const Home = () => {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleTheme = () => {
+    if (darkMode) {
+      document.body.classList.add("light");
+      document.body.classList.remove("dark");
+      setDarkMode(false);
+    } else {
+      document.body.classList.add("dark");
+      document.body.classList.remove("light");
+      setDarkMode(true);
+    }
+  };
+
   return (
     <section className="home-section">
       <div className="home-container">
@@ -63,6 +77,8 @@ const Home = () => {
               View Projects
             </a>
           </div>
+
+          
 
           {/* Social Icons */}
           <div className="social-icons">
