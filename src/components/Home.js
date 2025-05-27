@@ -59,7 +59,7 @@ const Home = () => {
             >
               <HiOutlineDocumentDownload /> View Resume
             </a>
-            <a href="#projects" className="btn btn-outline">
+            <a href="projects" className="btn btn-outline">
               View Projects
             </a>
           </div>
